@@ -1,0 +1,20 @@
+{
+  "blank_canvas": true,
+  "onload": [
+    "base = 'worlds/intro_extra_en/';",
+    "",
+    "var contents = [",
+    "    [base + 'slalom.json', 'Slalom'],",
+    "    [base + 'follow1.json', 'Back home'],",
+    "    [base + 'center1a.json', 'Center 1a'],",
+    "    [base + 'center2a.json', 'Center 2a'],",
+    "    [base + 'double.json', 'Double'],",
+    "    [base + 'target.json', 'Target'],",
+    "    [base + 'stars.json', 'Reaching for the stars'],",
+    "    [base + 'cave.json', 'In a cave'],",
+    "    [base + 'hopper1.json', 'Grace Hopper'],",
+    "    ['worlds/menus/select_collection_en.json', \"Other worlds\"]",
+    "    ];",
+    "MakeCustomMenu(contents);"
+  ]
+}

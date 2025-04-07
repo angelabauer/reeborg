@@ -1,0 +1,15 @@
+{
+  "blank_canvas": true,
+  "onload": [
+    "var varia = 'worlds/varia/';",
+    "",
+    "var contents = [",
+    "    ['worlds/menus/select_collection_fr.json', \"Autres mondes\"],",
+    "    [varia + 'blank.json', 'Canevas graphique']",
+    "];",
+    "",
+    "MakeCustomMenu(contents);",
+    "",
+    ""
+  ]
+}

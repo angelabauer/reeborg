@@ -1,0 +1,20 @@
+{
+  "blank_canvas": true,
+  "onload": [
+    "base = 'worlds/intro_extra_fr/';",
+    "",
+    "var contents = [",
+    "    [base + 'slalom.json', 'Slalom'],",
+    "    [base + 'follow1.json', 'Retour à la maison'],",
+    "    [base + 'center1a.json', 'Centrer 1a'],",
+    "    [base + 'center2a.json', 'Centrer 2a'],",
+    "    [base + 'double.json', 'Doubler'],",
+    "    [base + 'target.json', 'La cible'],",
+    "    [base + 'stars.json', 'Les étoiles'],",
+    "    [base + 'cave.json', 'La caverne'],",
+    "    [base + 'hopper1.json', 'Grace Hopper'],",
+    "    ['worlds/menus/select_collection_fr.json', \"Autres mondes\"]",
+    "    ];",
+    "MakeCustomMenu(contents);"
+  ]
+}

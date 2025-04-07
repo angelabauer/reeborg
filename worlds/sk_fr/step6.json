@@ -1,0 +1,372 @@
+{
+  "robots": [
+    {
+      "x": 6,
+      "y": 4,
+      "_prev_x": 6,
+      "_prev_y": 4,
+      "_prev_orientation": 2,
+      "objects": {},
+      "_orientation": 2,
+      "start_positions": [
+        [
+          1,
+          1
+        ]
+      ],
+      "_is_leaky": true,
+      "_trace_history": [],
+      "_trace_style": "default",
+      "_trace_color": "seagreen",
+      "__id": 11,
+      "model": "classic",
+      "possible_initial_positions": [
+        [
+          6,
+          4
+        ]
+      ]
+    }
+  ],
+  "walls": {
+    "4,5": [
+      "east"
+    ],
+    "4,4": [
+      "east"
+    ],
+    "4,3": [
+      "east"
+    ],
+    "5,2": [
+      "north"
+    ],
+    "6,2": [
+      "north"
+    ],
+    "7,2": [
+      "north"
+    ],
+    "7,3": [
+      "east"
+    ],
+    "7,4": [
+      "east"
+    ],
+    "7,5": [
+      "east"
+    ],
+    "7,6": [
+      "east"
+    ],
+    "7,7": [
+      "east"
+    ],
+    "7,8": [
+      "east"
+    ],
+    "4,8": [
+      "east"
+    ],
+    "4,7": [
+      "east"
+    ],
+    "7,9": [
+      "east",
+      "north"
+    ],
+    "6,9": [
+      "north"
+    ],
+    "5,9": [
+      "north"
+    ],
+    "4,9": [
+      "east"
+    ]
+  },
+  "description": [
+    "<h1>Utiliser la bibliothèque</h1>",
+    "<p>Reeborg doit ramasser son journal, (<em>l'Étoile de Phoenix</em>)  ",
+    "qui est dehors sur le gazon. Si vous ne l'avez pas déjà fait, ",
+    "définissez les fonctions <code>tourne_a_droite()</code> et <code>demi_tour()</code>",
+    "dans l'onglet biblio. ",
+    "Puis, utilisez ces fonctions définies dans la bibliothèque pour que Reeborg aille chercher le journal,",
+    "revienne dans sa maison et dépose son journal à l'endroit indiqué.",
+    "Une fois de plus, assurez-vous d'utiliser des commentaires et des lignes vides pour faciliter la lecture de votre programme.</p>",
+    "<h3>Ce que vous devez connaître</h3>",
+    "<ul><li>Les fonctions <code>avance()</code>, <code>tourne_a_gauche()</code>,",
+    "<code>prend()</code>, et <code>depose()</code>.</li>",
+    "<li>Savoir comment définir des fonctions.</li>",
+    "<li>Comment utiliser <code>import</code> pour accéder aux fonctions de la bibliothèque.</li></ul>",
+    "DIFFICULTY2",
+    "<h3>Fait divers</h3><p><em>L'Étoile de Phoenix</em> est la traduction française de",
+    " <em>The Star Phoenix</em> qui est le nom d'un journal de Saskatoon en Saskatchewan, CANADA.",
+    "Cette tâche a été créée par Dan Schellenberg, en Saskatchewan.</p>"
+  ],
+  "small_tiles": false,
+  "rows": 10,
+  "cols": 10,
+  "goal": {
+    "objects": {
+      "6,4": {
+        "star": 1
+      }
+    },
+    "possible_final_positions": [
+      [
+        6,
+        4
+      ]
+    ],
+    "position": {
+      "image": "racing_flag",
+      "x": 6,
+      "y": 4
+    }
+  },
+  "objects": {
+    "3,4": {
+      "star": 1
+    }
+  },
+  "tiles": {
+    "1,1": [
+      "grass"
+    ],
+    "1,2": [
+      "grass"
+    ],
+    "1,3": [
+      "grass"
+    ],
+    "1,4": [
+      "grass"
+    ],
+    "1,5": [
+      "gravel"
+    ],
+    "1,6": [
+      "gravel"
+    ],
+    "1,7": [
+      "gravel"
+    ],
+    "1,8": [
+      "grass"
+    ],
+    "1,9": [
+      "grass"
+    ],
+    "1,10": [
+      "grass"
+    ],
+    "2,1": [
+      "grass"
+    ],
+    "2,2": [
+      "grass"
+    ],
+    "2,3": [
+      "grass"
+    ],
+    "2,4": [
+      "grass"
+    ],
+    "2,5": [
+      "gravel"
+    ],
+    "2,6": [
+      "gravel"
+    ],
+    "2,7": [
+      "gravel"
+    ],
+    "2,8": [
+      "grass"
+    ],
+    "2,9": [
+      "grass"
+    ],
+    "2,10": [
+      "grass"
+    ],
+    "3,1": [
+      "grass"
+    ],
+    "3,2": [
+      "grass"
+    ],
+    "3,3": [
+      "grass"
+    ],
+    "3,4": [
+      "grass"
+    ],
+    "3,5": [
+      "gravel"
+    ],
+    "3,6": [
+      "gravel"
+    ],
+    "3,7": [
+      "gravel"
+    ],
+    "3,8": [
+      "grass"
+    ],
+    "3,9": [
+      "grass"
+    ],
+    "3,10": [
+      "grass"
+    ],
+    "4,1": [
+      "grass"
+    ],
+    "4,2": [
+      "grass"
+    ],
+    "4,3": [
+      "grass"
+    ],
+    "4,4": [
+      "grass"
+    ],
+    "4,5": [
+      "gravel"
+    ],
+    "4,6": [
+      "gravel"
+    ],
+    "4,7": [
+      "gravel"
+    ],
+    "4,8": [
+      "grass"
+    ],
+    "4,9": [
+      "grass"
+    ],
+    "4,10": [
+      "grass"
+    ],
+    "5,1": [
+      "grass"
+    ],
+    "5,2": [
+      "grass"
+    ],
+    "5,10": [
+      "grass"
+    ],
+    "6,1": [
+      "grass"
+    ],
+    "6,2": [
+      "grass"
+    ],
+    "6,10": [
+      "grass"
+    ],
+    "7,1": [
+      "grass"
+    ],
+    "7,2": [
+      "grass"
+    ],
+    "7,10": [
+      "grass"
+    ],
+    "8,1": [
+      "grass"
+    ],
+    "8,2": [
+      "grass"
+    ],
+    "8,3": [
+      "grass"
+    ],
+    "8,4": [
+      "grass"
+    ],
+    "8,5": [
+      "grass"
+    ],
+    "8,6": [
+      "grass"
+    ],
+    "8,7": [
+      "grass"
+    ],
+    "8,8": [
+      "grass"
+    ],
+    "8,9": [
+      "grass"
+    ],
+    "8,10": [
+      "grass"
+    ],
+    "9,1": [
+      "grass"
+    ],
+    "9,2": [
+      "grass"
+    ],
+    "9,3": [
+      "grass"
+    ],
+    "9,4": [
+      "grass"
+    ],
+    "9,5": [
+      "grass"
+    ],
+    "9,6": [
+      "grass"
+    ],
+    "9,7": [
+      "grass"
+    ],
+    "9,8": [
+      "grass"
+    ],
+    "9,9": [
+      "grass"
+    ],
+    "9,10": [
+      "grass"
+    ],
+    "10,1": [
+      "grass"
+    ],
+    "10,2": [
+      "grass"
+    ],
+    "10,3": [
+      "grass"
+    ],
+    "10,4": [
+      "grass"
+    ],
+    "10,5": [
+      "grass"
+    ],
+    "10,6": [
+      "grass"
+    ],
+    "10,7": [
+      "grass"
+    ],
+    "10,8": [
+      "grass"
+    ],
+    "10,9": [
+      "grass"
+    ],
+    "10,10": [
+      "grass"
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "walls": {},
+  "description": [
+    "<h1>More carrots</h1>",
+    "<p>Reeborg is harvesting carrots again. ",
+    "  This time, however, the gardens are all different sizes. ",
+    "  The carrots grow really well in some areas ",
+    "  (so there are more than one in some spots), ",
+    "  and not well at all in some spots ",
+    "  (so there are places where no carrots grow). ",
+    "  Reeborg can start anywhere in the garden, ",
+    "  and can be facing in any direction. </p>",
+    "<p>Reeborg’s job is to pick all the carrots, ",
+    "  put them down in the big carrot bin at the ",
+    "  north-east corner of the garden, then head back to the ",
+    "  south-west corner of the garden for a well deserved rest.</p>",
+    "<h3>What you need to know</h3>",
+    "<ul>",
+    "    <li>The functions <code>move()</code>, <code>turn_left()</code>,",
+    "        <code>take()</code>, ",
+    "        and <code>put()</code>.</li>",
+    "    <li>How to use the test <code>object_here()</code>, <code>at_goal()</code>",
+    "        <code>is_facing_north()</code>,",
+    "        <code>carries_object()</code>, <code>right_is_clear()</code> or <code>wall_on_right()</code>,",
+    " and <code>front_is_clear()</code> or <code>wall_in_front()</code>.</li>",
+    "    <li> How to use a <code>while</code> loop and an <code>if</code> statement.</li>",
+    "</ul>",
+    "DIFFICULTY6"
+  ],
+  "small_tiles": false,
+  "rows": 5,
+  "cols": 5,
+  "goal": {
+    "possible_final_positions": [
+      [
+        1,
+        1
+      ]
+    ],
+    "position": {
+      "image": "racing_flag",
+      "x": 1,
+      "y": 1
+    }
+  },
+  "onload": [
+    "var height, width, nb_carrots, total_nb, x, y;",
+    "",
+    "width = RUR.randint(3, 8);",
+    "height = RUR.randint(3, 8);",
+    "total_nb = 0;",
+    "RUR.set_world_size(width, height);",
+    "RUR.fill_background(\"pale_grass\");",
+    "",
+    "for (x=1; x<=width; x++) {",
+    "    for (y=1; y<=height; y++) {",
+    "        if ((x==1 && y==1) || (x==width && y==height)){",
+    "            continue;",
+    "        }",
+    "        if (RUR.randint(1, 10) >= 7){",
+    "            if (total_nb < 100) {",
+    "                nb_carrots = RUR.randint(1, 6);",
+    "                total_nb += nb_carrots;",
+    "                RUR.add_object(\"carrot\", x, y, {'number': nb_carrots});",
+    "            }",
+    "        }",
+    "    }",
+    "}",
+    "",
+    "RUR.add_object(\"carrot\", width, height, {'goal': true, 'number': total_nb});",
+    "",
+    "// add robot",
+    "x = RUR.randint(1, width);",
+    "y = RUR.randint(1, height);",
+    "r = new UsedRobot(x, y);",
+    "RUR.set_random_orientation();",
+    ""
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "walls": {},
+  "description": [
+    "<h1>Encore des carottes</h1>",
+    "<p>Reeborg doit cueillir des carottes à nouveau.",
+    "  Cette fois-ci, cependant, tous les jardins sont de taille différente.",
+    "  Les carottes poussent vraiment bien à certains endroits ",
+    "  (ce qui fait qu'on en retrouve plusieurs à un même endroit), ",
+    "  et pas bien du tout ailleurs.",
+    "  (donc, certains endroits n'ont pas de carottes). ",
+    "  Reeborg peut partir de n'importe où dans le jardin, ",
+    "  faisant face à n'importe quelle direction.</p>",
+    "<p>La tâche de Reeborg consiste à cueillir toutes les carottes, ",
+    "  les mettre dans le contenant situé au coin nord-est (en haut, à droite) ",
+    "  puis de retourner à son but, au coin sud-ouest (en bas, à gauche) ",
+    "  pour un congé bien mérité.</p>",
+    "<h3>Ce que vous devez connaître</h3>",
+    "<ul>",
+    "    <li>Les fonctions <code>avance()</code>, <code>tourne_a_gauche()</code>,",
+    "        <code>prend()</code>, ",
+    "        et <code>depose()</code>.</li>",
+    "    <li>Comment utiliser les conditions <code>objet_ici()</code>, <code>au_but()</code>",
+    "        <code>est_face_au_nord()</code>,",
+    "        <code>transporte()</code>, <code>rien_a_droite()</code> ou <code>mur_a_droite()</code>,",
+    " et <code>rien_devant()</code> ou <code>mur_devant()</code>.</li>",
+    "    <li> Comment utiliser une boucle <code>while</code> et un énoncé <code>if</code>.</li>",
+    "</ul>",
+    "DIFFICULTY6"
+  ],
+  "small_tiles": false,
+  "rows": 5,
+  "cols": 5,
+  "goal": {
+    "possible_final_positions": [
+      [
+        1,
+        1
+      ]
+    ],
+    "position": {
+      "image": "racing_flag",
+      "x": 1,
+      "y": 1
+    }
+  },
+  "onload": [
+    "var height, width, nb_carrots, total_nb, x, y;",
+    "",
+    "width = RUR.randint(3, 8);",
+    "height = RUR.randint(3, 8);",
+    "total_nb = 0;",
+    "RUR.set_world_size(width, height);",
+    "RUR.fill_background(\"pale_grass\");",
+    "",
+    "for (x=1; x<=width; x++) {",
+    "    for (y=1; y<=height; y++) {",
+    "        if ((x==1 && y==1) || (x==width && y==height)){",
+    "            continue;",
+    "        }",
+    "        if (RUR.randint(1, 10) >= 7){",
+    "            if (total_nb < 100) {",
+    "                nb_carrots = RUR.randint(1, 6);",
+    "                total_nb += nb_carrots;",
+    "                RUR.add_object(\"carrot\", x, y, {'number': nb_carrots});",
+    "            }",
+    "        }",
+    "    }",
+    "}",
+    "",
+    "RUR.add_object(\"carrot\", width, height, {'goal': true, 'number': total_nb});",
+    "",
+    "// add robot",
+    "x = RUR.randint(1, width);",
+    "y = RUR.randint(1, height);",
+    "r = new RobotUsage(x, y);",
+    "RUR.set_random_orientation();",
+    ""
+  ]
+}
